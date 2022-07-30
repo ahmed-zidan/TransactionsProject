@@ -1,0 +1,769 @@
+﻿::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: greenyellow;
+    border-radius: 20px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(27, 108, 5);
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+/* ===== Colours ===== */
+:root {
+    --body-color: #ffffff;
+    --nav-color: greenyellow;
+    --side-nav: #010718;
+    --text-color: rgb(0, 67, 4);
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --Dark-color: #24252657;
+    --pageBackGround: rgba(246, 246, 248,.7);
+}
+
+
+body {
+    background-image: url('../Imgs/GrassBack.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(6px);
+    background-repeat: no-repeat;
+}
+
+
+nav {
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    position: relative;
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 10px 5px rgb(27, 108, 5);
+    font-size: 0;
+    justify-content: space-between;
+}
+
+    nav .logo {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        line-height: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        z-index: 1;
+        position: relative;
+    }
+
+
+    nav div a {
+        font-size: 20px;
+        line-height: 50px;
+        font-weight: 600;
+        color: var(--text-color);
+        position: relative;
+    }
+
+.navigation1 a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.navigation2 a {
+    text-decoration: none;
+    display: inline-block;
+    z-index: 1;
+}
+
+
+.navigation2 .btn {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    background:none;
+}
+        .navigation2 .btn:focus{
+            outline:none;
+            border:none;
+            background:none;
+        }
+
+        .navigation1 a:nth-child(1) {
+            color: var(--text-color);
+            width: 100px;
+            transition: all 0.5s ease;
+        }
+
+    .navigation1 a:nth-child(1):hover {
+        background-color: green;
+        border-radius: 10px;
+    }
+
+.navigation1 a:nth-child(2) {
+    color: var(--text-color);
+    width: 110px;
+    transition: all 0.5s ease;
+}
+
+    .navigation1 a:nth-child(2):hover {
+        background-color: green;
+        border-radius: 10px;
+    }
+
+.navigation1 a:nth-child(3) {
+    color: var(--text-color);
+    width: 110px;
+    transition: all 0.5s ease;
+}
+
+    .navigation1 a:nth-child(3):hover {
+        background-color: green;
+        border-radius: 10px;
+    }
+
+.mainSection {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    flex-direction: column;
+}
+
+.text {
+    text-align: center;
+}
+
+    .text h1 {
+        color: var(--text-color);
+        font-size: 5em;
+        font-weight: bolder;
+        font-family: 'Hurricane',cursive;
+    }
+
+    .text h2 {
+        color: white;
+        font-weight: bolder;
+        font-size: 3em;
+    }
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+    .options a {
+        text-decoration: none;
+        color: var(--text-color);
+        background-color: var(--nav-color);
+        margin: 10px 10px;
+        padding: 10px;
+        border-radius: 0 40px 40px 40px;
+        transition: all 0.01s ease-in-out;
+    }
+
+        .options a:hover {
+            background-color: green;
+            transform: scale(1.2);
+        }
+
+
+.myPop {
+    border: solid;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: 110vh;
+    
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+    .myPop.show {
+        z-index: 200;
+        border: solid;
+        opacity: 1;
+        pointer-events: auto;
+       background:rgba(27, 108, 5 , 0.4);
+    }
+
+
+
+#popUp {
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 30%;
+    border-radius: 40px;
+    box-shadow: 0 20px 20px;
+    left:35%;
+    top:25%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--nav-color);
+}
+
+    #popUp .lblMessage {
+        font-size: 2em;
+        color: var(--text-color);
+    }
+
+    #popUp .btn {
+        font-size: 2em;
+        color: var(--text-color);
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-left: 180px;
+        margin-top: 30px;
+    }
+
+
+    /*----- login page -------*/
+
+.loginContents{
+
+    width:100%;
+    height:80vh;
+    display:flex;
+   
+    position:relative;
+    justify-content:center;
+    align-items:center;
+
+}
+
+    .loginContents .container{
+        display:flex;
+        flex-direction:column;
+        left:100px;
+        height:400px;
+        align-items:center;
+        
+    }
+
+        .loginContents .container div{
+            padding:10px;
+        }
+
+        .lblLogIN {
+            margin: -200px;
+            font-size: 30px;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+
+
+.txtLogIn {
+    font-size: 20px;
+    
+    border: 3px solid greenyellow;
+    padding: 5px;
+    border-bottom-width: 2px;
+    color: var(--text-color);
+    border-radius: 50px;
+    background-color: var(--nav-color);
+    transition: all 0.3s ease;
+}
+
+    
+    .txtLogIn:hover{
+        border-color: darkgreen;
+    }
+
+.loginContents .btn {
+    font-size: 30px;
+    background-color: var(--nav-color);
+    
+    color: var(--text-color);
+    box-shadow:2px 3px 3px;
+    border-radius:30px;
+    border: 2px solid greenyellow;
+}
+
+.loginContents .btn:hover {
+        border-color: darkgreen;
+}
+
+
+/*-------Services--------*/
+
+
+.Report{
+    background-color:rgba(27, 108, 5 ,0.6);
+    
+}
+
+
+.links {
+    padding: 50px;
+    margin-top: 20px;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.links a{
+    margin-left:50px;
+    font-size:20px;
+}
+
+.title{
+    display:flex;
+    margin:30px;
+    font-size:3.2em;
+    color:white;
+    justify-content:center;
+    align-items:center;
+    font-weight:800;
+}
+
+.content{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.reportCard {
+    background-color: aliceblue;
+    border: 5px solid rgb(246, 246, 248);
+    min-height: 20em;
+    width: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    display: inline-block;
+    box-shadow:5px 5px .4px;
+    transition:all 0.3s ease;
+
+}
+
+
+.reportCard:hover{
+    transform:scale(1.3);
+}
+
+
+.ServiceImage img {
+    width: 100%;
+}
+
+.serviceTitle{
+    display:flex;
+    font-size:20px;
+    text-transform:uppercase;
+    font-weight:400;
+    margin-top:10px
+}
+
+
+.Users{
+
+    margin-top:50px;
+
+    background-color:rgba(27, 108, 5 ,0.6);
+
+
+}
+
+
+/*--------UploadSuperMarketSales--------*/
+
+.content-MarketSales {
+    
+    background-color: rgba(246, 246, 248,.7);
+    height:120vh;
+    border-radius:30px;
+    margin-top:40px;
+    width:100%;
+    border:solid;
+}
+
+.content-MarketSales h1{
+    padding:20px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--text-color);
+}
+
+.content-MarketSales .MarketUploadContent .uploadBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        
+}
+
+.content-MarketSales .MarketUploadContent .uploadBtn .ddlUpload{
+    display:inline-block;    
+    margin-top:20px;
+    width:auto;
+    height:5vh;
+    font-size:30px;
+    background-color:green;
+    border-radius:5px;
+    padding:10px 15px;
+}
+
+.MarketUploadContent .show{
+    font-size:15px;
+    padding:10px;
+    margin-top:10px;
+}
+
+
+
+.content-MarketSales .maketSalesContent {
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    padding:50px;
+}
+
+.maketSalesContent .lblFiirstTenRows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: solid;
+}
+
+.maketSalesContent .Upload{
+    display:inline-block;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+/*---------- superMarketSalesReport--------------*/
+
+.superMarketSalesReportSection{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:100vh;
+    padding:10px;
+    background-color:var(--pageBackGround);
+    margin-top:30px;
+    border-radius:30px;
+    border:solid;
+}
+
+.superMarketSalesReportContent .title{
+    color:var(--text-color);
+    font-weight:600;
+}
+
+.superMarketSalesReportContent .options {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    
+}
+
+.superMarketSalesReportContent .Branch{
+    
+    margin-right:20px;
+    font-size:30px;
+    color:var(--text-color);
+}
+
+.superMarketSalesReportContent .DDL {
+    
+    margin-right: 20px;
+    font-size: 30px;
+    color: var(--text-color);
+    background-color:darkgreen;
+    border-radius:5px;
+    border-width:2px;
+}
+
+.superMarketSalesReportContent .DDL:hover {
+    border-color:var(--nav-color);
+}
+
+.superMarketSalesReportContent .reportDate {
+   display:flex;
+   flex-direction:row;
+   
+   justify-content:center;
+   align-items:center;
+}
+
+.superMarketSalesReportContent .reportDate .title{
+    font-size:30px;
+    margin-left:30px;
+    color:var(--text-color);
+    
+}
+
+.superMarketSalesReportContent .reportDate .ReportTxt {
+        font-size: 30px;
+        border-width:2px;
+
+        
+      
+}
+
+.superMarketSalesReportContent .reportDate .ReportTxt:hover {
+       border-color:var(--nav-color); 
+}
+
+
+.superMarketSalesReportContent .ex {
+    display: flex;
+
+    justify-content: center;
+}
+
+.superMarketSalesReportContent .excel {
+    
+    padding:5px;
+    border-radius:10px;
+    font-size:30px;
+    margin-top:20px;
+    
+
+
+}
+
+/*---------- baseball salary-----------*/
+
+.BaseballSalaries {
+    justify-content: center;
+    position:relative;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    
+    background-color: var(--pageBackGround);
+    margin-top: 30px;
+    border-radius: 30px;
+    border: solid;
+}
+
+.BaseballSalaries .contents{
+    justify-content:center;
+    align-items:center;
+}
+
+.BaseballSalaries .contents .title{
+
+    color:var(--text-color);
+    padding:20px;
+    border-bottom:2px solid black;
+}
+
+.BaseballSalaries .contents .fileName{
+    justify-content:center;
+    display:flex;
+    font-size:20px;
+    font-weight:300;
+}
+
+.BaseballSalaries .contents .pnlGridView {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    
+
+}
+
+.BaseballSalaries .contents .btns{
+    display:flex;
+    justify-content:center;
+    padding:30px;
+}
+
+.BaseballSalaries .contents .btns .myBtn {
+
+    font-size:20px;
+    padding:10px;
+    border-radius: 0 10px 10px 10px;
+    margin:20px;
+    border-color:white;
+    border-width:2px;
+    transition:all 0.2s ease-out;
+}
+
+.BaseballSalaries .contents .btns .myBtn:hover{
+        transform:scale(1.2);
+        border-color:var(--nav-color);
+}
+
+
+.UploadBaseballSalaryPopUp{
+    top:50%;
+    left:50%;
+    position:fixed;
+    transform:translate(-50% , -50%) scale(0);
+    transition:all 200ms ease-in-out;
+    background-color:darkgreen;
+    z-index:200;
+    max-width:80%;
+    width:500px;
+    padding:10px;
+    border-radius:20px;
+    border:2px solid white;
+    
+}
+
+    .UploadBaseballSalaryPopUp.active {
+        
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .UploadBaseballSalaryPopUp .closeBtnContainer {
+        justify-content: center;
+        display: flex;
+    }
+
+    .UploadBaseballSalaryPopUp .closeBtn {
+        font-size: 40px;
+        align-items:center;
+        justify-content:center;
+        background-color:darkgreen;
+        background-color:rgba(0, 67, 4,0.4);
+        width:60px;
+        height:60px;
+        border-radius:50px;
+        margin-bottom:20px;
+        transition:all 0.2s ease;
+        color:red;
+        font-weight:500;
+
+    }
+
+    .UploadBaseballSalaryPopUp .closeBtn:hover{
+        border-color:var(--nav-color);
+        transform:scale(1.2);
+     }
+
+        .UploadBaseballSalaryPopUp .selectExcel {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+.UploadBaseballSalaryPopUp .selectExcel .flUpload{
+    font-size:20px;
+    color:red;
+    background-color:green;
+    margin-right:30px;
+    border-color:white;
+    border-radius:10px;
+    border-width:1px;
+}
+
+.UploadBaseballSalaryPopUp .selectExcel .show{
+    font-size:20px;
+    border-radius:0 0 20px 20px;
+    border:3px dashed white;
+    transition:all 0.2s ease;
+
+ }
+
+.UploadBaseballSalaryPopUp .selectExcel .show:hover{
+    border-color:var(--nav-color);
+
+}
+
+    .UploadBaseballSalaryPopUp .ddlSheetsContainer {
+        justify-content: center;
+        align-items: center;
+       padding:30px;
+        display: flex;
+    }
+
+    .UploadBaseballSalaryPopUp .ddlSheets {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 200px;
+        height: auto;
+        border-radius: 30px;
+        border: 4px double darkgreen;
+        background-color: white;
+        transition: all 0.1s ease;
+        font-size:20px;
+    }
+
+.UploadBaseballSalaryPopUp .ddlSheets:hover {
+            border-color: greenyellow;
+}
+
+.UploadBaseballSalaryPopUp .showContainer {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+.UploadBaseballSalaryPopUp .showContainer .show{
+    font-size:20px;
+    border-radius:10px;
+    border:1px solid white;
+    transition:all 0.2s ease-in-out;
+}
+
+.UploadBaseballSalaryPopUp .showContainer .show:hover{
+    transform:scale(1.2);
+    border-color:var(--nav-color);
+}
+
+
+.BaseballSalaries #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(27, 108, 5,0.4);
+    pointer-events:none;
+    opacity:0;
+}
+
+.BaseballSalaries #overlay .active {
+        opacity: 1;
+        pointer-events: auto;
+}
